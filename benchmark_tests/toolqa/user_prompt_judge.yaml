@@ -1,0 +1,46 @@
+template: |
+  **Question:**
+  {question}
+
+  **Ground Truth Answer:**
+  {ground_truth_answer}
+
+  **Agent's Answer:**
+  {agent_answer}
+
+few_shots:
+  - question: "How long did Henry attend Chili cook-off on 2022/03/21?"
+    gt_answer: "3:00:00"
+    agent_answer: "3 hours"
+    classification: "correct"
+    score: 5
+  - question: "What events does Brian have on 2022/03/17 in the agenda table?"
+    gt_answer: "Art walk, Book signing"
+    agent_answer: 'Book signing'
+    classification: "partially_correct"
+    score: 3
+  - question: "Which political parties in India have had at least two prime ministers ?"
+    gt_answer: 'Zhu Han'
+    agent_answer: 'Haisong Huang'
+    classification: "wrong"
+    score: 1
+  - question: "What was the average daily volume of coffee traded from 2006-04-20 to 2019-03-06?"
+    gt_answer: '9322.4'
+    agent_answer: '9320.0'
+    classification: "partially_correct"
+    score: 3
+  - question: "How many papers did A method to include reservoir operations in catchment hydrological models using SHETRAN cite?"
+    gt_answer: '5'
+    agent_answer: '5'
+    classification: "correct"
+    score: 5
+  - question: "What is the average review counts of businesses within a 5-mile radius from Maro Brothers' Discount Liquor Mart?"
+    gt_answer: '23.25'
+    agent_answer: '23.998599'
+    classification: "partially_correct"
+    score: 4
+  - question: "What did Daisy do from 11:00 PM to 1:00 AM on 2022/02/01?"
+    gt_answer: "Late Night Movie"
+    agent_answer: "Daisy attended a Late Night Movie at Nuart Theatre from 11:00 PM on 2022-02-01 to 1:00 AM on 2022-02-02."
+    classification: "correct"
+    score: 5

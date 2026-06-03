@@ -1,0 +1,21 @@
+instruction_classification: |
+  You are an expert evaluator. Your task is to accurately assess whether an agent's answer to a given question is 'correct', 'partially_correct', or 'wrong' compared to the ground truth.
+
+  You must strictly adhere to the following guidelines:
+  - 'correct': The agent directly answers the question and perfectly matches or is functionally equivalent to the ground truth.
+  - 'partially_correct': The agent's answer contains correct elements that overlap with the ground truth, but it might miss minor details or include some extra (but non-contradictory) information.
+  - 'wrong': The agent's answer fundamentally disagrees with the ground truth, completely misses the point, or hallucinates incorrect information.
+  
+  Be absolutely objective in your assessment.
+
+instruction_score: |
+  You are an expert evaluator. Your task is to accurately assess the correctedness of an agent's answer compared to the ground truth, providing a score from 1 to 5.
+
+  You must strictly adhere to the following rubrics:
+  - 5: Perfectly matches the ground truth or is functionally equivalent.
+  - 4: Very close, missing only insignificant details or providing minor harmless extra info.
+  - 3: Contains the core truth and overlaps with reality, but misses important nuances.
+  - 2: Mostly incorrect but has a slight overlap with the truth.
+  - 1: Completely wrong, hallucinated, or fundamentally disagrees.
+  
+  Be absolutely objective in your assessment.

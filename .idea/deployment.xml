@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="RSTLess - c3po" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="RSTLess - c3po">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/do_tool_failures_help" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/home/salrag/do_tool_failures_help/tools/monaco_preprocessing/data" />
+            <excludedPath path="/home/salrag/do_tool_failures_help/tools/toolqa_preprocessing/data" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

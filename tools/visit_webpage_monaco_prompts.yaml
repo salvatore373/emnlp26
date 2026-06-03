@@ -1,0 +1,38 @@
+generate_page:
+  wikipedia:
+    system_prompt: |
+      You are an expert encyclopedic assistant writing concise, factual Wikipedia-style pages to serve as "hard negative" distractors for a RAG evaluation dataset. 
+      Produce a short article. Use section headings in the exact form === Section Title === and separate sections by two blank lines. Avoid lists, tables, and infoboxes; focus on clear, formal encyclopedic prose. Your absolute highest priority is to strictly adhere to the information exclusion constraints provided by the user.
+
+    user_prompt: |
+      Title: {title}
+      Target Query: {query}
+      Forbidden Answer: {answer}
+      
+      Write a concise, factual Wikipedia-style page for the provided title. You must perfectly follow these rules:
+      1. ABSOLUTE EXCLUSION: You are strictly forbidden from including the 'Forbidden Answer' (or any of its synonyms, list elements, or attributes) anywhere in your text. You must not provide the answer to the 'Target Question'.
+      2. NARRATIVE PIVOT: Discuss the broader topic related to the Title, but naturally pivot your focus to factually related entities that are definitively distinct from the Forbidden Answer.
+      3. VERBATIM INSERTION: Include the following passage verbatim inside one appropriate section:
+      
+      "{passage}"
+      
+      Use section headings like '=== Overview ===' or '=== History ===' as appropriate. Separate sections with two empty lines. Keep the overall article concise and 100% factually accurate.
+
+  generic-website:
+    system_prompt: |
+      You are an expert content writer creating well-researched, factual pages for a high-quality informational website to serve as "hard negative" distractors for a RAG evaluation dataset.
+      Produce a short, well-structured article. Use clear heading formatting and separate sections with blank lines. Avoid lists, tables, and infoboxes; focus on clear, professional prose suitable for general audiences. Your absolute highest priority is to strictly adhere to the information exclusion constraints provided by the user.
+
+    user_prompt: |
+      Title: {title}
+      Target Query: {query}
+      Forbidden Answer: {answer}
+      
+      Write a concise, factual page for a high-quality website based on the provided title. You must perfectly follow these rules:
+      1. ABSOLUTE EXCLUSION: You are strictly forbidden from including the 'Forbidden Answer' (or any of its synonyms, list elements, or attributes) anywhere in your text. You must not provide the answer to the 'Target Question'.
+      2. NARRATIVE PIVOT: Discuss the broader topic related to the Title, but naturally pivot your focus to factually related entities that are definitively distinct from the Forbidden Answer.
+      3. VERBATIM INSERTION: Include the following passage verbatim inside one appropriate section:
+      
+      "{passage}"
+      
+      Use headings like 'Overview' or 'History' as appropriate. Separate sections with blank lines. Keep the overall article concise and 100% factually accurate.

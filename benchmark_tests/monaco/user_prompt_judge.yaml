@@ -1,0 +1,51 @@
+template: |
+  **Question:**
+  {question}
+
+  **Ground Truth Answer:**
+  {ground_truth_answer}
+
+  **Agent's Answer:**
+  {agent_answer}
+
+few_shots:
+  - question: "How many female members of Knesset are in Center, Right-wing and Left-wing parties? List the number of MKs for each political affiliation."
+    gt_answer: "[[12,15,4]]"
+    agent_answer: "{'Right-wing': 12, 'Center': 15, 'Left-wing': 4}"
+    classification: "correct"
+    score: 5
+  - question: "What languages are spoken in Scandinavia?"
+    gt_answer: '[["Danish","German"],["Norwegian","Kven","Romani","Scandoromani","Norwegian Sign Language"],["Swedish","Sámi","Finnish","Meänkieli","Romani","Yiddish"],["Swedish"],["Faroese","Danish"],["Finnish","Swedish","Sami","Karelian","Finnish Kalo","Finnish Sign Language","Finland-Swedish Sign Language"],["Icelandic"]]'
+    agent_answer: "The languages spoken in Scandinavia are diverse. The core languages, which evolved from Old Norse, include: Continental Scandinavian Languages (Danish, Norwegian, Swedish), and Insular Scandinavian Languages (Icelandic, Faroese). Additionally, the region features several other significant languages and minority tongues, such as the indigenous Sámi languages, Finnish (a major language in Finland), Greenlandic (Kalaallisut), and recognized minority languages like Meänkieli and Kven."
+    classification: "correct"
+    score: 5
+  - question: "What percentage of films that grossed over 100 million dollars were superhero movies in 2019 vs 2009?"
+    gt_answer: "[[40.0],[10.0]]"
+    agent_answer: '["43%", 12]'
+    classification: "partially_correct"
+    score: 4
+  - question: "Which political parties in India have had at least two prime ministers ?"
+    gt_answer: '[ "Indian National Congress", "Janata Party", "Janata Dal", "Bharatiya Janata Party" ]'
+    agent_answer: '["BJP", "JD", "JP"]'
+    classification: "partially_correct"
+    score: 3
+  - question: "who was the leading scorer for the winning team in the deciding game of Kobe Bryant's first NBA title?"
+    gt_answer: '["Shaquille O''Neal"]'
+    agent_answer: '"Kobe Bryant"'
+    classification: "wrong"
+    score: 1
+  - question: "Did all of the Republican political leaders in the Spanish Civil War belong to Socialist parties?"
+    gt_answer: '["false"]'
+    agent_answer: '"No"'
+    classification: "correct"
+    score: 5
+  - question: "What was the voter turnout in the past three presidential elections in Honduras?"
+    gt_answer: '[ "57.49%", "59.14%", "49.88" ]'
+    agent_answer: '"57"'
+    classification: "partially_correct"
+    score: 2
+  - question: "Who was runner up to Benjamin Netanyahu during the first, second and third elections where he was elected prime minister?"
+    gt_answer: "['Shimon Peres', 'Tzipi Livni', 'Yair Lapid']"
+    agent_answer: '["Shimon Peres (1996)", "Tzipi Livni (2009)", "Yesh Atid / Yair Lapid (2013)"]'
+    classification: "correct"
+    score: 5
