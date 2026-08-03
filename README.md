@@ -1,4 +1,4 @@
-# _Do Tool Failures Help?_ Repository
+# _When Tool Failures Help_ Repository
 This is the repository for reproducing the experiments from "Do Tool Failures Help?" on the **MoNaCo** and **ToolQA** benchmark dataset.
 
 ## 📦 Prerequisites
